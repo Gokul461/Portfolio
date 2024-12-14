@@ -10,7 +10,8 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo"><h1>My portfolio</h1></div>
+      <div class="logo"><img src="assets/port2.gif" alt="Animated Image" class="animated-image">
+      </div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -21,7 +22,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">My portfolio</div>
+      <div class="logo"><img src="assets/port2.gif" alt="Animated Image" class="animated-image"></div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -41,9 +42,9 @@
         <img src="assets/me5.jpg" alt="profile picture" class="pic" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Gokulnath</h1>
-        <p class="section__text__p2">Software Engineer</p>
+        <p class="section__text__p1" id="greet">Hello, I'm</p>
+        <h1 class="title" id="name">Gokulnath</h1>
+        <p class="section__text__p2" id="role">Software Engineer</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -76,8 +77,8 @@
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
-          <img src="assets/me6.jpg" alt="Profile picture" class="about-pic" />
-        </div>
+          <img src="assets/me6.jpg" alt="Profile picture" class="about-pic1" id="profile-pic"/>
+        </div>        
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
@@ -107,6 +108,25 @@
           </div>
         </div>
       </div>
+      <!-- add img of achievement -->
+       <div class="card-design">
+      <div class="card">
+        <img src="assets/imp-pic1.jpeg" alt="Impairathon" class="card-img">
+        <div class="card-label">Our Big Win</div>
+      </div>
+      <div class="card">
+        <img src="assets/imp-pic2.jpg" alt="Impairathon" class="card-img">
+        <div class="card-label">Impairathon Finalist</div>
+      </div>
+      <div class="card">
+        <img src="assets/gdg-pic.jpg" alt="Impairathon" class="card-img">
+        <div class="card-label">GDG Core Memeber</div>
+      </div>
+      <div class="card">
+        <img src="assets/gdg-pic2.jpg" alt="Impairathon" class="card-img">
+        <div class="card-label">Web development lead</div>
+      </div>
+    </div>
       <img
         src="./assets/down-chevron_10117732.png"
         alt="Arrow icon"
@@ -114,7 +134,7 @@
         onclick="location.href='./#experience'"
       />
     </section>
-    <section id="experience">
+    <section id="experience" class="ex">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experienced Skills</h1>
       <div class="experience-details-container">
@@ -341,7 +361,7 @@
         onclick="location.href='./#projects'"
       />
     </section>
-    <section id="projects">
+    <section id="projects" class="pro">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
