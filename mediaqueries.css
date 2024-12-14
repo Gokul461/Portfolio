@@ -11,7 +11,38 @@
       height: fit-content;
     }
   }
-  
+  @media (max-width: 768px) { /* iPad Mini screen size */
+    .about-pic1 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%; /* Adjust size as needed */
+    }
+    .animated-image {
+      width: 300px; /* Adjusted for medium screens */
+      top: 32px;
+      left: 35px;
+  }
+  footer {
+    height: 20vh; /* Adjust footer height for smaller screens */
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .foot {
+    font-size: 10px; /* Reduce font size further */
+  }
+
+  footer .nav-links-container {
+    font-size: 12px; /* Adjust the font size */
+    flex-direction: row; /* Change the layout to row for better fit */
+    justify-content: space-around; /* Ensure even spacing */
+  }
+  footer nav {
+    height: fit-content; /* Ensures the height adjusts according to content */
+  }
+}
+
   @media screen and (max-width: 1200px) {
     #desktop-nav {
       display: none;
@@ -51,23 +82,38 @@
     #contact{
       height:57vh;
       margin-top:30%;
-
+    }
+    .animated-image {
+      width: 230px; /* Adjusted for smaller screens */
+      top: 25px;
+      left: 30px;
     }
     footer {
-      height: 20vh;
+      height: 13vh;
     }
-    footer{
+
+    .foot {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      font-size: 12px; /* Reduce font size */
+    }
+  
+    footer {
       margin-top: 10vh;
+      margin-bottom: 5vh;
     }
-    footer .nav-links-container{
+  
+    footer .nav-links-container {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      /* width:fit-content; */
+      font-size: 1px; /* Adjust font size for better fitting */
     }
     #profile {
-      height: 83vh;
-      margin-top: 30px;
+      height: 78vh;
+      margin-top: 50px;
       margin-bottom: 0;
     }
     article {
@@ -85,11 +131,41 @@
     .btn-container {
       flex-wrap: wrap;
     }
+    .pro .about-containers,
+    .btn-container .project-img{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Centers all items */
+      gap: 20px; /* Adjust space between items */
+    }
+  
+    .pro .about-containers > *,
+    .btn-container > * {
+      width: calc(50% - 20px); /* Each item takes half the row minus gap adjustment */
+      box-sizing: border-box;
+    }
+  
+  .btn-container > button {
+    display: inline-block;
+    width: auto; /* Keeps button width flexible */
+    height: auto; /* Ensures height stays appropriate */
+    padding: 10px 20px; /* Adjust padding for consistent shape */
+    border-radius: 20px; /* Prevents full circular shape */
+    box-sizing: border-box; /* Maintains consistent sizing */
+  }
+  .article-container > img {
+    display: inline-block;
+    width: auto; /* Keeps the image's width proportional */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Ensures image fits within its container */
+    border-radius: 5px; /* Prevents circular appearance */
+    object-fit: cover; /* Ensures the image scales properly */
+  }
     .contact-info-container {
       margin: 0;
     }
-    .contact-info-container p,
-    .nav-links li a {
+    .contact-info-container p
+     {
       font-size: 1rem;
       margin-right:10px;
     }
@@ -105,7 +181,7 @@
       text-align: center;
     }
     .section__pic-container {
-      height: 46vw;
+      height: 43vw;
       justify-content: center;
     }
     .section__text__p2 {
